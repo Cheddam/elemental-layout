@@ -1,6 +1,6 @@
 <?php
 
-class BlockPage extends Page
+class BlocksPage extends Page
 {
     private static $table_name = 'BlocksPage';
 
