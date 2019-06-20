@@ -1,0 +1,6 @@
+---
+Name: mysitecontentblocks
+---
+BlocksPage:
+  extensions:
+    - DNADesign\Elemental\Extensions\ElementalPageExtension
