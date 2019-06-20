@@ -1,38 +1,38 @@
-# Overview
+# Layout Block Experiments
 
-Create a project skeleton for a SilverStripe 4 Platform project. 
-Sets up an empty theme and nightwatch for testing.
-
-## How to setup new project by using this skeleton
-
+### Build steps:
 ```
-# Checkout the repo
-git clone git@github.com:silverstripeltd/project-skeleton.git <yourproject> -o skeleton
+# Run composer
+composer install
 
-# Change directory to your project
-cd <yourproject>
+# install yarn dependencies
+yarn
 
-# replace the remote origin with your own
-git remote remove skeleton
-git remote add origin git://git@whatever.com/your/project.git
+# create a .env file from the template
+cp .env.dist .env
 
-# it is good idea to adjust content of `.project.skeleton.README.md` file now
-
-# change this readme file with project-skeleton readme and commit
-git mv -f .project.skeleton.README.md README.md && git commit -m "Init project from Skeleton"
-
-# push to master
-git push origin master
+# run a dev/build
+vendor/bin/sake dev/build flush=1
 ```
 
-## Environment
+## Available Build Tools
 
-Project teams should run their website consistently,
-in order to help each other and avoid confusion by differences in configuration.
-SilverStripe Ltd. prefers [Vagrant](https://www.vagrantup.com/).
-Read the ["Vagrant" Confluence page](https://silverstripe.atlassian.net/wiki/spaces/DEV/pages/401506576/Vagrant)
-for setup and usage details.
+* `yarn` install dependencies
+* `yarn dev` builds dev js and scss
+* `yarn watch` same as `yarn dev` but watches for changes
+* `yarn production` minifies production files
+* `yarn prod` alias for `yarn production`
+* `yarn lint` lints js and scss
+* `yarn hot` **unsupported** hot module reloading
 
-## Robots.txt
+### Other tools and commands
 
-Default robots.txt example file. Remember to update the sitemap location.
+* `composer silverstripe-standards` run all coding standards checks, including linters (php, js, scss)
+* `composer phpcs-fix` run code-sniffer fixer
+
+## Further Documentation and How to
+* [Acceptance Testing with Nightwatch](docs/nightwatch.md)
+* [Building Components with Vue](docs/vue.md)
+* [Vue Unit Testing](docs/vuetest.md)
+* [Maintaining a reusable component Library with Storybook](docs/storybook.md)
+* [Adding CWP and/or watea theme](docs/cwp.md)
