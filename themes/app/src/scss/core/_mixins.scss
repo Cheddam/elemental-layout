@@ -19,3 +19,11 @@
   background-image: url('#{$icon-path}/#{$icon}.svg');
   content: '';
 }
+
+@mixin element-padding-left {
+  padding-left: 20px;
+}
+
+@mixin element-padding-right {
+  padding-right: 20px;
+}

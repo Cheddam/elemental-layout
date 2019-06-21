@@ -1,11 +1,16 @@
+img {
+  height: auto;
+  max-width: 100%;
+}
+
 img.center {
   margin: 0 auto;
   display: block;
 }
 
 img.leftAlone {
-  @extend .float-left;
-
+  float: left;
+  margin-right: auto;
   padding: 0 1rem 1rem 0;
   display: block;
 }
@@ -15,8 +20,8 @@ img.leftAlone + * {
 }
 
 img.rightAlone {
-  @extend .float-right;
-
+  float: right;
+  margin-left: auto;
   padding: 0 0 1rem 1rem;
   display: block;
 }

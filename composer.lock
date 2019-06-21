@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ee6a006b5af3108294e05aefe01c4001",
+    "content-hash": "a09dc1c2ea057d49457437c11a98e77a",
     "packages": [
         {
             "name": "asyncphp/doorman",
@@ -3489,6 +3489,49 @@
                 "silverstripe"
             ],
             "time": "2017-11-20T04:21:34+00:00"
+        },
+        {
+            "name": "silverstripe/elemental-fileblock",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-elemental-fileblock.git",
+                "reference": "204f344eee862eb7440640bf8a56ce6bca818736"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-elemental-fileblock/zipball/204f344eee862eb7440640bf8a56ce6bca818736",
+                "reference": "204f344eee862eb7440640bf8a56ce6bca818736",
+                "shasum": ""
+            },
+            "require": {
+                "dnadesign/silverstripe-elemental": "^4@dev",
+                "silverstripe/assets": "^1.3",
+                "silverstripe/cms": "^4.3",
+                "silverstripe/vendor-plugin": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\ElementalFileBlock\\": "src/",
+                    "SilverStripe\\ElementalFileBlock\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "A file block for the silverstripe-elemental module",
+            "keywords": [
+                "Content Blocks",
+                "elemental",
+                "silverstripe"
+            ],
+            "time": "2018-12-18T02:49:23+00:00"
         },
         {
             "name": "silverstripe/environmentcheck",
