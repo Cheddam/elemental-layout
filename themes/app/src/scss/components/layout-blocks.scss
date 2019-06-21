@@ -6,14 +6,12 @@
   @include media-breakpoint-up(md) {
     grid-template-columns: 1fr 1fr;
 
-    .element {
-      &:first-child {
-        @include element-padding-right;
-      }
+    .element:first-child {
+      @include element-padding-right;
+    }
 
-      &:last-child {
-        @include element-padding-left;
-      }
+    .element:last-child {
+      @include element-padding-left;
     }
   }
 }
@@ -22,17 +20,15 @@
   @include media-breakpoint-up(md) {
     grid-template-columns: 1fr 1fr;
 
-    .element {
-      &:first-child {
-        @include element-padding-right;
+    .element:first-child {
+      @include element-padding-right;
 
-        grid-row: span 2;
-      }
+      grid-row: span 2;
+    }
 
-      &:nth-child(2),
-      &:nth-child(3) {
-        @include element-padding-left;
-      }
+    .element:nth-child(2),
+    .element:nth-child(3) {
+      @include element-padding-left;
     }
   }
 }
@@ -44,34 +40,36 @@
   .element {
     grid-column: 1;
     grid-row: 1;
+  }
 
-    &:first-child {
+  .element:first-child {
+    height: 100%;
+    position: relative;
+
+    > div {
       height: 100%;
-      position: relative;
-
-      > div {
-        height: 100%;
-      }
-
-      img {
-        object-fit: contain;
-      }
-
-      &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, rgba(0,0,0,0.3967787798713235) 0%, rgba(0,0,0,0.5032213569021359) 50%, rgba(0,0,0,0.39957990031950286) 100%);
-      }
     }
 
-    &:nth-child(2) {
-      color: white;
-      z-index: 1;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.3967787798713235) 0%,
+          rgba(0, 0, 0, 0.5032213569021359) 50%,
+          rgba(0, 0, 0, 0.39957990031950286) 100%
+        );
     }
+  }
+
+  .element:nth-child(2) {
+    color: white;
+    z-index: 1;
   }
 }
 
@@ -84,72 +82,70 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .element {
-    &:first-child {
-      @include media-breakpoint-up(md) {
-        @include element-padding-right;
-      }
+  .element:first-child {
+    @include media-breakpoint-up(md) {
+      @include element-padding-right;
+    }
+  }
+
+  .element:nth-child(2) {
+    @include media-breakpoint-up(md) {
+      @include element-padding-left;
+
+      grid-column: 2;
     }
 
-    &:nth-child(2) {
-      @include media-breakpoint-up(md) {
-        @include element-padding-left;
+    @include media-breakpoint-up(lg) {
+      @include element-padding-right;
 
-        grid-column: 2;
-      }
+      grid-column: 1;
+      grid-row: 2;
+      padding-left: 0;
+    }
+  }
 
-      @include media-breakpoint-up(lg) {
-        @include element-padding-right;
-
-        grid-column: 1;
-        grid-row: 2;
-        padding-left: 0;
-      }
+  .element:nth-child(3) {
+    @include media-breakpoint-up(md) {
+      grid-column: 1 / span 2;
+      grid-row: 2;
     }
 
-    &:nth-child(3) {
-      @include media-breakpoint-up(md) {
-        grid-column: 1 / span 2;
-        grid-row: 2;
-      }
+    @include media-breakpoint-up(lg) {
+      @include element-padding-left;
+      @include element-padding-right;
 
-      @include media-breakpoint-up(lg) {
-        @include element-padding-left;
-        @include element-padding-right;
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 2;
+    }
+  }
 
-        grid-column: 2 / span 1;
-        grid-row: 1 / span 2;
-      }
+  .element:nth-child(4) {
+    @include media-breakpoint-up(md) {
+      @include element-padding-right;
+
+      grid-row: 3;
     }
 
-    &:nth-child(4) {
-      @include media-breakpoint-up(md) {
-        @include element-padding-right;
+    @include media-breakpoint-up(lg) {
+      @include element-padding-left;
 
-        grid-row: 3;
-      }
+      grid-column: 3;
+      grid-row: 1;
+      padding-right: 0;
+    }
+  }
 
-      @include media-breakpoint-up(lg) {
-        @include element-padding-left;
+  .element:nth-child(5) {
+    @include media-breakpoint-up(md) {
+      @include element-padding-left;
 
-        grid-column: 3;
-        grid-row: 1;
-        padding-right: 0;
-      }
+      grid-column: 2;
+      grid-row: 3;
     }
 
-    &:nth-child(5) {
-      @include media-breakpoint-up(md) {
-        @include element-padding-left;
-
-        grid-column: 2;
-        grid-row: 3;
-      }
-
-      @include media-breakpoint-up(lg) {
-        grid-column: 3;
-        grid-row: 2;
-      }
+    @include media-breakpoint-up(lg) {
+      grid-column: 3;
+      grid-row: 2;
     }
   }
 }
