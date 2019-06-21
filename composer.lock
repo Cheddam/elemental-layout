@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b4d407753a6b33c12d029be9de33350e",
+    "content-hash": "ee6a006b5af3108294e05aefe01c4001",
     "packages": [
         {
             "name": "asyncphp/doorman",
@@ -880,6 +880,59 @@
                 "silverstripe"
             ],
             "time": "2019-05-09T03:44:59+00:00"
+        },
+        {
+            "name": "dnadesign/silverstripe-elemental-list",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dnadesign/silverstripe-elemental-list.git",
+                "reference": "b32123f187e69793e6bb5b83b301e527e049ad89"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dnadesign/silverstripe-elemental-list/zipball/b32123f187e69793e6bb5b83b301e527e049ad89",
+                "reference": "b32123f187e69793e6bb5b83b301e527e049ad89",
+                "shasum": ""
+            },
+            "require": {
+                "dnadesign/silverstripe-elemental": ">=3.0",
+                "silverstripe/vendor-plugin": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DNADesign\\ElementalList\\": "src/",
+                    "DNADesign\\ElementalList\\Tests\\": "tests/php/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "John Milmine",
+                    "email": "john.milmine@dna.co.nz"
+                }
+            ],
+            "description": "Adds a new element for nested elements",
+            "keywords": [
+                "Content Blocks",
+                "element",
+                "elemental",
+                "silverstripe"
+            ],
+            "time": "2019-01-27T17:19:27+00:00"
         },
         {
             "name": "doctrine/cache",

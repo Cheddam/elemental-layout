@@ -12,7 +12,8 @@
         "bringyourownideas/silverstripe-composer-security-checker": "^2.0",
         "bringyourownideas/silverstripe-composer-update-checker": "^2.0",
         "silverstripe/auditor": "^2.0",
-        "dnadesign/silverstripe-elemental": "^4"
+        "dnadesign/silverstripe-elemental": "^4",
+        "dnadesign/silverstripe-elemental-list": "^1.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",
