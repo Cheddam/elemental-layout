@@ -1,12 +1,10 @@
-.layout-block .list-element__container {
+.layout-block {
   display: grid;
 }
 
 .layout-block--two-column {
   @include media-breakpoint-up(md) {
-    .list-element__container {
-      grid-template-columns: 1fr 1fr;
-    }
+    grid-template-columns: 1fr 1fr;
 
     .element {
       &:first-child {
@@ -22,9 +20,7 @@
 
 .layout-block--one-two {
   @include media-breakpoint-up(md) {
-    .list-element__container {
-      grid-template-columns: 1fr 1fr;
-    }
+    grid-template-columns: 1fr 1fr;
 
     .element {
       &:first-child {
@@ -42,10 +38,8 @@
 }
 
 .layout-block--stacked {
-  .list-element__container {
-    align-items: center;
-    text-align: center;
-  }
+  align-items: center;
+  text-align: center;
 
   .element {
     grid-column: 1;
@@ -81,17 +75,13 @@
   }
 }
 
-.layout-block--five-block {
+.layout-block--two-one-two {
   @include media-breakpoint-up(md) {
-    .list-element__container {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @include media-breakpoint-up(lg) {
-    .list-element__container {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .element {
