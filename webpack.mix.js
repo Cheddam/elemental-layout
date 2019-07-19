@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const Autoprefixer = require('autoprefixer');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
@@ -37,7 +38,14 @@ mix.setResourceRoot(`/resources/${distFolder}/`); // Prefixes urls in processed 
 mix.js(`${srcFolder}/js/app.js`, distFolder)
   .sass(`${srcFolder}/scss/app.scss`, distFolder)
   .sass('themes/app/src/scss/editor.scss', distFolder)
-  .options({ processCssUrls: true });
+  .options({
+    processCssUrls: false,
+    postCss: [
+      Autoprefixer({
+        grid: true,
+      }),
+    ],
+  });
 
 if (process.env.NODE_ENV === 'production') {
   mix.minify(`${distFolder}/app.css`)
